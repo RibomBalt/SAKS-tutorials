@@ -27,6 +27,7 @@ import time
 SAKS = SAKSHAT()
 
 if __name__ == "__main__":
+    print('start to work')
     while True:
         #从 ds18b20 读取温度（摄氏度为单位）
         temp = SAKS.ds18b20.temperature
@@ -40,4 +41,3 @@ if __name__ == "__main__":
         #数码管显示温度数值，5位(含小数点)、精确到小数点1后1位
         SAKS.digital_display.show(("%5.1f" % temp).replace(' ','#'))
         time.sleep(5)
-    input("Enter any keys to exit...")
